@@ -1,0 +1,60 @@
+---
+import '@fontsource-variable/familjen-grotesk';
+import '@fontsource-variable/jetbrains-mono';
+import '../styles/global.css';
+import { site } from '../data/site';
+import { url } from '../data/url';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title = site.title, description = site.description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#17121F" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={url('/favicon.svg')} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap bar">
+        <a class="brand" href={url('/')}>{site.name}</a>
+        <nav aria-label="Main">
+          <a href={url('/#projects')}>Projects</a>
+          <a href={url('/#about')}>About</a>
+          <a href={url('/#contact')}>Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="wrap">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="wrap bar">
+        <span class="mono">&copy; {new Date().getFullYear()} {site.name}</span>
+        <ul class="links mono">
+          {site.email ? <li><a href={`mailto:${site.email}`}>Email</a></li> : <li>TODO: email</li>}
+          <li><a href={site.github} rel="me">GitHub</a></li>
+          {site.linkedin ? <li><a href={site.linkedin} rel="me">LinkedIn</a></li> : <li>TODO: LinkedIn</li>}
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
