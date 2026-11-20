@@ -3,18 +3,14 @@ export const site = {
   name: 'Aaryan Kadam',
   title: 'Aaryan Kadam | Data Scientist & AI Engineer',
   description:
-    'Portfolio of Aaryan Kadam, data scientist and AI engineer (MS Analytics, Georgia Tech). Case studies in recommendation, clustering and healthcare analytics.',
+    'Portfolio of Aaryan Kadam, data scientist and AI engineer (MS Analytics, Georgia Tech). Case studies in LLM agents, deep learning, sports analytics and recommendation.',
   tagline:
     'Data scientist and AI engineer. I turn messy data into models and products people use.',
-  // TODO: confirm what Aaryan wants public (employer, GPA, graduation date).
   detail:
     'MS Analytics at Georgia Tech, graduating December 2026, open to full-time roles. Prior experience: decision analytics at ZS Associates (pharma).',
   github: 'https://github.com/aaryankadam',
-  // TODO: add public contact email (left blank so it is not published without approval).
-  email: '',
-  // TODO: add LinkedIn profile URL.
-  linkedin: '',
-  // TODO: write the about blurb (2-4 sentences) in Aaryan's own words.
+  email: 'aaryankadam2000@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/aaryan-kadam/',
   about:
-    'TODO: short about blurb in Aaryan\'s own words (background, what you like working on, what you are looking for).',
+    "I'm finishing an MS in Analytics at Georgia Tech (December 2026), building on an Electrical Engineering degree from IIT Goa and about three years of applied analytics at ZS Associates. I like taking a messy, ambiguous question through to a working, evaluated solution, using Python, SQL, PyTorch and LLM-based systems. I'm looking for full-time data science and AI engineering roles starting January 2027.",
 };
