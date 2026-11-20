@@ -1,16 +1,40 @@
 ---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { site } from '../data/site';
+
+const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base>
+  <section class="hero">
+    <h1>{site.tagline}</h1>
+    <p class="lede">{site.detail}</p>
+    <p class="cta mono">
+      <a href="#projects">Projects</a>
+      <a href={site.github}>GitHub</a>
+    </p>
+  </section>
+
+  <section id="projects" aria-labelledby="projects-h">
+    <h2 id="projects-h">Projects</h2>
+    <div class="grid">
+      {projects.map((p) => <ProjectCard project={p} />)}
+    </div>
+  </section>
+
+  <section id="about" aria-labelledby="about-h">
+    <h2 id="about-h">About</h2>
+    <p>{site.about}</p>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Contact</h2>
+    <ul class="links mono">
+      {site.email ? <li><a href={`mailto:${site.email}`}>Email</a></li> : <li>TODO: email</li>}
+      <li><a href={site.github}>GitHub</a></li>
+      {site.linkedin ? <li><a href={site.linkedin}>LinkedIn</a></li> : <li>TODO: LinkedIn</li>}
+    </ul>
+  </section>
+</Base>
