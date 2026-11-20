@@ -3,6 +3,7 @@ title: NBA Player Archetype Clustering
 summary: Data-driven NBA player archetypes from K-Means and GMM clustering, tested for what they add to Win Shares prediction.
 order: 5
 stack: [Python, PCA, K-Means, GMM, Random Forest]
+icon: clusters
 status: shipped
 repo: https://github.com/aaryankadam/NBA-Beyond-Positions
 ---
@@ -38,7 +39,6 @@ Cluster centers were mapped back to traditional statistics to name the archetype
 
 - Cluster separation is modest (silhouette about 0.13), so archetype boundaries are soft and the names are interpretive.
 - The salary analysis is noisy at the player level, ignores the commercial premium for stars, and its most undervalued players are mostly on rookie contracts, which is a feature of the labor market rather than an exploitable gap.
-- TODO: add a next step, such as validating archetypes on held-out seasons.
 
 ## Links
 

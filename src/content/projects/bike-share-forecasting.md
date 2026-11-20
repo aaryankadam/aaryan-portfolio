@@ -3,6 +3,7 @@ title: Bike-Share Demand Forecasting
 summary: Forecasts daily bike-share demand and turns the model into fleet and staffing rules.
 order: 6
 stack: [Python, scikit-learn, XGBoost, UCI data]
+icon: chart
 status: shipped
 metric: Lasso test R² 0.697
 repo: https://github.com/aaryankadam/bike_sharing_analysis
@@ -25,10 +26,6 @@ Model output thresholds feed a four-tier operational framework (Low, Medium, Hig
 
 - Five models benchmarked. Linear models beat tree-based models; Lasso was best with test R² = 0.697 and RMSE = 1,089 rentals. A likely reason is the small dataset, which makes XGBoost over-engineered here.
 - The model under-predicts on 57% of days, so unmet demand is the main operational risk rather than over-supply.
-
-## What I'd do next
-
-- TODO: 1-3 limitations or next steps in Aaryan's words (for example, daily rather than hourly or per-station forecasts).
 
 ## Links
 

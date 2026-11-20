@@ -77,6 +77,8 @@ nav a:hover { color: var(--accent); }
   border-radius: 10px;
 }
 .card h3 { margin: 0; }
+.card .icon { color: var(--muted); }
+.card:hover .icon, .card:focus-within .icon { color: var(--accent); }
 .card p { margin: 0; color: var(--muted); }
 .card-link { color: var(--text); text-decoration: none; }
 .card-link::after { content: ''; position: absolute; inset: 0; border-radius: 10px; }
@@ -90,6 +92,12 @@ nav a:hover { color: var(--accent); }
 .tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .4rem; max-width: none; }
 .tags li { border: 1px solid var(--border); border-radius: 999px; padding: .1rem .6rem; color: var(--muted); }
 .metric { color: var(--accent); }
+
+/* about with photo */
+.about { display: grid; gap: 1.5rem; align-items: start; }
+.about p { margin: 0; }
+.portrait { width: 8.5rem; height: 8.5rem; border-radius: 50%; object-fit: cover; object-position: 50% 30%; border: 1px solid var(--border); }
+@media (min-width: 40rem) { .about { grid-template-columns: 1fr auto; gap: 2.5rem; } .about .portrait { order: 2; width: 11rem; height: 11rem; } }
 
 /* case study */
 .case { max-width: var(--measure); }

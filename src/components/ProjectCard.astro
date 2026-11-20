@@ -1,15 +1,17 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { url } from '../data/url';
+import Icon from './Icon.astro';
 
 interface Props {
   project: CollectionEntry<'projects'>;
 }
 const { project } = Astro.props;
-const { title, summary, stack, metric, repo, demo } = project.data;
+const { title, summary, stack, metric, repo, demo, icon } = project.data;
 ---
 
 <article class="card">
+  {icon && <Icon name={icon} />}
   <h3><a class="card-link" href={url(`/projects/${project.id}/`)}>{title}</a></h3>
   <p>{summary}</p>
   <ul class="tags mono" aria-label="Tech stack">

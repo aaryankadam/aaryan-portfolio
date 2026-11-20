@@ -3,6 +3,7 @@ title: Defensive Coordination Index
 summary: A coach-interpretable index of how well a back line defends as a unit, built from tracking data for NWSL and FA WSL matches.
 order: 3
 stack: [Python, SciPy, Databricks, Tracking data]
+icon: shield
 status: in-progress
 ---
 
@@ -29,14 +30,13 @@ Component weights were derived by regression. Scoring runs through a Databricks 
 
 The block and press-cover scores are very weakly correlated (Spearman 0.06), which supports treating them as separate scenarios. The metric was reworked to fix floor and ceiling effects (synchronization 5% to 44%, stability 90% to 55%).
 
-TODO: final correlation values (total, NWSL, WSL) after 11/23. The expected-threat validation points in the opposite direction to what was expected and is unresolved, so no finding is stated yet.
+Final correlation values (overall, NWSL and WSL) will be added after the final report. An expected-threat validation check points in the opposite direction to what was expected and is still being interpreted, so no conclusion is stated yet.
 
 ## What I'd do next
 
 - Resolve the expected-threat validation result.
-- TODO: add further limitations after the final report.
 
 ## Links
 
-- No public code or data (data-use agreement).
-- Write-up: TODO, pending sponsor sign-off.
+- Repo: coming soon.
+- Raw tracking data is not shared (data-use agreement).

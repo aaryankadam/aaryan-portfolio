@@ -3,8 +3,9 @@ title: Bias propagation in LLM agent pipelines
 summary: Tests whether bias measured at single stages of an LLM agent pipeline predicts bias in the full pipeline.
 order: 1
 stack: [Python, RAG, LLM agents, PACE/ICE]
+icon: network
 status: in-progress
-# repo: TODO add repo URL
+# repo: add when public
 ---
 
 *Course project, CSE 8803 (Language Models and Agents). In progress: experiments and an "assessor" component are still running, so nothing here is a final result.*
@@ -29,15 +30,8 @@ Primary research questions: how bias composes across stages, selection versus in
 
 ## Result
 
-TODO: no final results yet. Add after the experiments and assessor finish; do not claim a finding before then.
-
-Scale so far: bias measured across 6,160 variants. TODO: confirm this is the final number.
-
-## What I'd do next
-
-- TODO: add honest limitations once results are in.
+Results are not final yet. They will be added when the experiments and the assessor component finish.
 
 ## Links
 
-- Repo: TODO
-- Write-up: TODO (cite related work only if the final report cites it)
+Repo and write-up: coming soon.

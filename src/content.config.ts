@@ -10,6 +10,7 @@ const projects = defineCollection({
       summary: z.string(),
       order: z.number(),
       stack: z.array(z.string()),
+      icon: z.enum(['network', 'pulse', 'shield', 'music', 'clusters', 'chart']).optional(),
       status: z.enum(['shipped', 'in-progress']),
       metric: z.string().optional(),
       repo: z.url().optional(),

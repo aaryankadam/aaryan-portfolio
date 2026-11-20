@@ -2,6 +2,8 @@
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import { Image } from 'astro:assets';
+import portrait from '../assets/aaryan.jpg';
 import { site } from '../data/site';
 
 const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
@@ -26,15 +28,18 @@ const projects = (await getCollection('projects')).sort((a, b) => a.data.order -
 
   <section id="about" aria-labelledby="about-h">
     <h2 id="about-h">About</h2>
-    <p>{site.about}</p>
+    <div class="about">
+      <Image class="portrait" src={portrait} alt="Portrait of Aaryan Kadam" width={352} height={352} densities={[1, 2]} loading="lazy" />
+      <p>{site.about}</p>
+    </div>
   </section>
 
   <section id="contact" aria-labelledby="contact-h">
     <h2 id="contact-h">Contact</h2>
     <ul class="links mono">
-      {site.email ? <li><a href={`mailto:${site.email}`}>Email</a></li> : <li>TODO: email</li>}
+      {site.email ? <li><a href={`mailto:${site.email}`}>Email</a></li> : null}
       <li><a href={site.github}>GitHub</a></li>
-      {site.linkedin ? <li><a href={site.linkedin}>LinkedIn</a></li> : <li>TODO: LinkedIn</li>}
+      {site.linkedin ? <li><a href={site.linkedin}>LinkedIn</a></li> : null}
     </ul>
   </section>
 </Base>

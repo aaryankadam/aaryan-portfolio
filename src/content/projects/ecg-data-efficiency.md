@@ -3,8 +3,9 @@ title: ECG classification and data efficiency
 summary: Compares how much labeled data three ECG classification approaches need.
 order: 2
 stack: [Python, PyTorch, XGBoost, PTB-XL]
+icon: pulse
 status: in-progress
-# repo: TODO add repo URL (confirm it is public and the README has results; a fork is safer)
+# repo: add when the final repo (or fork) is public
 ---
 
 *Course project, CS 7643 (Deep Learning). In progress: the milestone report is done, the final report is due Dec 4 and the poster session is Dec 7. Multi-seed results are pending.*
@@ -27,13 +28,8 @@ Wavelet features are used for the classical track because raw signals have shift
 
 Preliminary, single seed: the CNN-BiLSTM reaches test macro AUROC 0.855 at 5% of the training data and 0.924 at 100%.
 
-TODO: classical-track best model with AUROC, AUPRC and F1 at 5% and 100%, and the final three-seed numbers.
-
-## What I'd do next
-
-- TODO: add limitations once the multi-seed results are in.
+Final multi-seed results, including the classical-track comparison, will be added when the project wraps up.
 
 ## Links
 
-- Repo: TODO
-- Write-up: TODO
+Repo and write-up: coming soon.
